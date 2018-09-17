@@ -1,3 +1,3 @@
-# My Awesome Book
+# 참고 
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+[홍정모 교수](https://blog.naver.com/atelierjpro/221308789543)
