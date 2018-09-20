@@ -84,3 +84,11 @@ int main()
 - eg. int, double의 경우 덧셈처리가 가능하지만 char인 특정 자료형은 strcpy()으로 처리 해야함 
 - 이경우 typename을 지정 안함 : `template<  >`
 
+## 스마트 템플릿 
+
+- auto_ptr
+- shared_ptr
+- unique_ptr
+- weak_ptr
+
+
