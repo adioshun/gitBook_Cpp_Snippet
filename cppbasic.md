@@ -53,6 +53,29 @@ class Grunt : public NPC{
 
 ```
 
+---
 
+# 템플릿 
+
+```cpp
+//제작자 코드 
+template<typename T>
+class CTest
+{
+private : 
+ T data;  // int data가 아니라 T로 데이터 타입 미정의
+}
+
+// 사용자 코드 
+int main()
+{
+  CTest<int> a;  //int로 미정의된 데이터 타입 정
+  
+  return 0;
+}
+
+
+
+```
 
 
