@@ -57,9 +57,11 @@ class Grunt : public NPC{
 
 # 템플릿 
 
+**자료형**이 다를 경우 **미지정**하고 추후 지정하도록 템플릿만 만들어 놓은것 
+
 ```cpp
 //제작자 코드 
-template<typename T>
+template<typename T> 
 class CTest
 {
 private : 
@@ -73,9 +75,6 @@ int main()
   
   return 0;
 }
-
-
-
 ```
 
 
