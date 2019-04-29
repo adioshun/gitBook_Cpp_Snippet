@@ -52,7 +52,7 @@ foo.o: foo.h foo.c
 bar.o: bar.h bar.c
     gcc -c -o bar.o bar.c
     
-############## 또느 ##################
+############## 또는 ##################
 OBJS=main.o foo.o bar.o
 TARGET=app.out
  
@@ -79,11 +79,12 @@ make
 
 - Makefile을 보다 쉽고 편리하게 작성할 수 있는 툴
 - 문제점 : 소스코드를 수정해서 의존성이 바뀔 때마다 Makefile을 수정 해야 함 
+- cmake를 실행 하면 `CMakeLists.txt`를 읽어서 `Makefile`을 생성 한다. 
 
 ![](https://i.imgur.com/333cDBz.png)
 `CMakeLists.txt에서는 중간 생성물인 Object 파일들은 기술할 필요가 없으므로 생략`
 
-## CMakeLIsts.txt
+## CMakeLists.txt
 
 스크립트 작성 
 
@@ -93,6 +94,7 @@ ADD_EXECUTABLE( app.out main.c foo.c bar.c )
 
 실행 
 
+```python
+cmake CMakeLists.txt  
 ```
-cmake CMakeLists.txt
-```
+
