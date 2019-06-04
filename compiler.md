@@ -97,6 +97,7 @@ ADD_EXECUTABLE( app.out main.c foo.c bar.c )
 실행 
 
 ```python
-cmake CMakeLists.txt  
+$ cmake CMakeLists.txt  
+$ make
 ```
 
