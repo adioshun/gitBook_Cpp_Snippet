@@ -101,3 +101,29 @@ $ cmake CMakeLists.txt
 $ make
 ```
 
+---
+
+## 에러처리 
+
+###### fatal error: ros/ros.h: No such file or directory
+
+```python 
+vi ~/.bashrc
+export catkin_INCLUDE_DIRS="/opt/ros/melodic/include"
+
+vi CMakelists.txt
+include_directories(
+    ${PCL_INCLUDE_DIRS}
+    ${catkin_INCLUDE_DIRS}  ##추가  
+    )
+```
+
+###### undefined reference to `ros::spin()'
+
+```python 
+vi CMakeLists.txt
+target_link_libraries(ground 
+   ${catkin_LIBRARIES} #추가 
+   )
+```
+
