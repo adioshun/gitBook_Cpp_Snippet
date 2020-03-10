@@ -105,8 +105,9 @@ $ make
 
 ---
 
+# 에러 처리 
 
-## 패키지 못 찾는 에러처리 
+## 1. 패키지 못 찾는 에러처리 
 
   ```python
 # Could not find a package configuration file provided by
@@ -124,15 +125,15 @@ $ make
 
   ```
 
-### 1. 패키지 설치 
+### 1.1 패키지 설치 
 
-- 1.1 의존성 파일 자동 설치 
+- A. 의존성 파일 자동 설치 
 
 ```python 
 $ rosdep install --from-paths src --ignore-src -r -y
 ```
 
-- 1.2 관련 파일 검색후 설치 
+- B. 관련 파일 검색후 설치 
 ```python 
 $ apt-get install apt-file && apt-file update
 
@@ -144,13 +145,13 @@ $ apt-file search Qt5CoreConfig.cmake
   """
 
 $ sudo apt install qtbase5-dev
-
+```
 > ref [What package do I need to build...](https://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application/374775)
 
 
-### 2. 설치는 되어 있으나 못 찾는 문제 
+### 1.2 설치는 되어 있으나 못 찾는 문제 
 
-- 2.1 CMakeLists 에 지정 
+- A. CMakeLists 에 지정 
 
 ```Python 
 locate PCLConfig.cmake #pclConfig.cmake 위치 확인 
@@ -162,7 +163,7 @@ set (pcl_DIR "/usr/lib/x86_64-linux-gnu/cmake/pcl") #CMakeList.txt의 `find_pack
 > `$sudo ln -s PCLConfig.cmake pclConfig.cmake`
 
 
-- 2.2 cmake시 지정 
+- B. cmake시 지정 
 
 ```Python 
 locate PCLConfig.cmake
@@ -170,7 +171,9 @@ cmake .. -DPCL_DIR=/usr/local/share/pcl-1.7
 ```
 
 
-## 헤더 못 찾는 에러처리 
+## 2. 헤더 못 찾는 에러처리 
+
+### 2.2 설치는 되어 있으나 못 찾는 문제 
 
 ###### fatal error: ros/ros.h: No such file or directory
 
